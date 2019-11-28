@@ -2149,6 +2149,7 @@ updatebars(void)
 					       CWOverrideRedirect|CWBackPixmap|CWEventMask, &wa);
 			XDefineCursor(dpy, m->barwinBottom, cursor[CurNormal]->cursor);
 			XMapRaised(dpy, m->barwinBottom);
+			XSetClassHint(dpy, m->barwinBottom, &ch);
 		}
 	}
 }
